@@ -1,0 +1,180 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-color:#0a0a0a;
+  color:white;
+}
+
+/* HEADER */
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:#0d1b2a;
+}
+
+.header h2{
+  color:#4fc3f7;
+}
+
+.header nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.header nav a:hover{
+  color:#4fc3f7;
+}
+
+
+/* HERO */
+
+.hero{
+  background-image: 'url(https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/02/365-O-que-e%CC%81-tecnologia_.jpg)'; 
+  height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(#0d1b2a,#000000);
+  text-align:center;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero button{
+  padding:12px 30px;
+  border:none;
+  background:#4fc3f7;
+  color:black;
+  font-weight:bold;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:#29b6f6;
+}
+
+
+/* SECTIONS */
+
+section{
+  padding:80px 10%;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:40px;
+  color:#4fc3f7;
+}
+
+
+/* CARDS */
+
+.cards{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  background:#0d1b2a;
+  padding:25px;
+  border-radius:10px;
+  width:250px;
+  margin: 40px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 15px rgba(79,195,247,0.5);
+}
+
+.card h3{
+  color:#4fc3f7;
+  margin-bottom:10px;
+}
+
+
+/* FERRAMENTAS */
+
+.tools{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:30px;
+}
+
+.tool{
+  border:2px solid #4fc3f7;
+  border-radius:50%;
+  width:120px;
+  height:120px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+}
+
+
+/* VERSÕES */
+
+#versoes .card{
+  margin:auto;
+}
+
+
+/* FOOTER */
+
+footer{
+  background:#0d1b2a;
+  padding:40px 10%;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+footer h3, footer h4{
+  color:#4fc3f7;
+}
+
+footer input{
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  margin-right:10px;
+}
+
+footer button{
+  padding:10px 20px;
+  background:#4fc3f7;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+footer p{
+  width:100%;
+  margin-top:30px;
+  text-align:center;
+  border-top:1px solid #333;
+  padding-top:20px;
+}
