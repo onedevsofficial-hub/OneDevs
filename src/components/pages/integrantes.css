@@ -5,79 +5,65 @@
 }
 
 .team-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1152px; /* 6xl */
+  max-width: 1152px;
+  margin: 0 auto;
 }
 
+/* Título */
 .team-title {
-  font-size: 2.25rem; /* 4xl */
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 16px;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 
 .team-subtitle {
   text-align: center;
-  color: #9ca3af; /* gray-400 */
+  color: #9ca3af;
   margin-bottom: 64px;
-  max-width: 42rem; /* 2xl */
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.1rem;
 }
 
-/* Grid/Lista de Integrantes */
+/* Lista */
 .team-list {
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
-/* Card do Integrante */
+/* Card */
 .member-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 32px;
-  background-color: #111827; /* gray-900 */
-  border: 1px solid rgba(59, 130, 246, 0.3); /* blue-500/30 */
-  border-radius: 8px;
-  padding: 32px;
-  transition: all 0.3s ease;
+  gap: 40px;
+  background: linear-gradient(90deg,#0f172a,#111827);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+  transition: 0.3s ease;
 }
 
 .member-card:hover {
-  border-color: rgba(59, 130, 246, 0.6);
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.7);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
 }
 
-/* Lógica de Alternância (Foto Esquerda/Direita) */
-@media (min-width: 768px) {
-  .member-card {
-    flex-direction: row;
-  }
-  
-  .member-card.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .member-info.text-right {
-    text-align: right;
-  }
+/* Alternar lado da imagem */
+.member-card.reverse {
+  flex-direction: row-reverse;
 }
 
 /* Avatar */
-.avatar-container {
-  flex-shrink: 0;
-}
-
 .avatar-wrapper {
-  position: relative;
-  width: 192px; /* w-48 */
-  height: 192px;
+  width: 220px;
+  height: 220px;
+  min-width: 220px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid rgba(59, 130, 246, 0.5);
+  border: 5px solid rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .avatar-img {
@@ -86,35 +72,64 @@
   object-fit: cover;
 }
 
-/* Texto */
+/* Informações */
 .membro-info {
-  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
 }
 
+/* Nome */
 .membro-nome {
-  font-size: 1.5rem; /* 2xl */
+  font-size: 2.2rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 8px;
 }
 
+/* Cargo */
 .membro-titulo {
-  color: #60a5fa; /* blue-400 */
+  font-size: 1.2rem;
   font-weight: 600;
+  color: #60a5fa;
   margin-bottom: 16px;
 }
 
+/* Descrição */
 .membro-descricao {
-  color: #d1d5db; /* gray-300 */
-  margin-bottom: 12px;
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
+/* Destaque */
 .highlight-label {
-  color: #93c5fd; /* blue-300 */
-  font-weight: 600;
+  color: #93c5fd;
+  font-weight: 700;
 }
 
-.membro-bio {
-  color: #9ca3af; /* gray-400 */
-  font-style: italic;
+/* Responsivo */
+@media (max-width: 768px) {
+
+  .member-card,
+  .member-card.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .membro-info {
+    align-items: center;
+  }
+
+  .membro-nome {
+    font-size: 1.8rem;
+  }
+
+  .avatar-wrapper {
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+  }
 }
