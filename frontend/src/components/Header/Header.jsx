@@ -21,7 +21,7 @@ export default function Header(){
         <header className="header">
             <div className="header-logo-container">
                 <img src={logoImg} alt="Logo OneDevs" />
-                <h2>OneDevs</h2>
+                <h2>OneDevsOS</h2>
             </div>
 
             <nav>

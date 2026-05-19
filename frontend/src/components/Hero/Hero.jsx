@@ -16,7 +16,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
-      <h1>Bem vindo ao OneDevs</h1>
+      <h1>Bem vindo ao OneDevsOS</h1>
 
       <p className="paragrafo">
         Onde a tecnologia encontra a proteção
