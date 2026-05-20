@@ -9,7 +9,8 @@ import Versoes from "./components/Versoes-Sobre/Versoes";
 import Sobre from "./components/Versoes-Sobre/Sobre";
 import Footer from "./components/Footer/Footer";
 import Copyright from "./components/Copyright/Copyright";
-import Integrantes from "./components/pages/integrantes"
+import Integrantes from "./components/pages/Integrantes/integrantes"
+import Contato from "./components/pages/Contato/contato"
 
 function Home() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/integrantes" element={<Integrantes />} />
+        <Route path="/contato" element={<Contato/>}/>
       </Routes>
 
     </div>

@@ -63,6 +63,7 @@ export default function Footer(){
                 <button className="btn-footer" onClick={cadastrarEmail} >Enviar</button>
             </div>
             
+            
         </div>
         
 

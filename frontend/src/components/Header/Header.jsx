@@ -52,6 +52,10 @@ export default function Header(){
                 <span onClick={() => navigate("/integrantes")}>
                     Integrantes
                 </span>
+
+                <span onClick={() => navigate("/contato")}>
+                    Contato
+                </span>
             </nav>
         </header>
     )
