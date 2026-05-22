@@ -1,0 +1,137 @@
+.contato-pagina {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  gap: 50px;
+}
+
+/* Lado esquerdo */
+.contato-esquerda {
+  flex: 1;
+}
+
+.contato-esquerda h1 {
+  font-size: 55px;
+  margin-bottom: 30px;
+  color: #4fc3f7;
+}
+
+.info p {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Alinhamento do Ícone com o Texto do Email */
+.email-linha {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.icon-contato {
+  font-size: 24px;
+}
+
+/* Lado direito */
+.contato-direita {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.card-branco {
+  width: 100%;
+  max-width: 550px;
+  background: #0d1b2a;
+  border: 2px solid #4fc3f7;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.2);
+  transition: 0.3s;
+}
+
+.card-branco:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(79, 195, 247, 0.4);
+}
+
+.card-branco h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4fc3f7;
+  font-size: 35px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  border: 2px solid #4fc3f7;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #cfcfcf;
+}
+
+textarea {
+  height: 160px;
+  resize: none;
+}
+
+/* Botão */
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #4fc3f7;
+  color: #0a0a0a;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #29b6f6;
+  transform: scale(1.02);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .contato-pagina {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contato-esquerda h1 {
+    font-size: 40px;
+  }
+
+  .email-linha {
+    justify-content: center;
+  }
+
+  .card-branco {
+    padding: 30px;
+  }
+
+  .icon-contato {
+    font-size: 20px;
+  }
+}   
