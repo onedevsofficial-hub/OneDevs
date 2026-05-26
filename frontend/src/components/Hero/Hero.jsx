@@ -1,4 +1,6 @@
 import { CgImport } from "react-icons/cg";
+import { AiFillRead } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 import './Hero.css'
 
 export default function Hero() {
@@ -13,6 +15,8 @@ export default function Hero() {
      // abre o download em nova aba
   //    window.open(downloadLink, "_blank");
   //  };
+
+  const navigate = useNavigate(); 
 
   return (
     <section id="hero" className="hero">
@@ -31,6 +35,8 @@ export default function Hero() {
 
       <button > <CgImport /> Baixe Agora </button>  
       {/* onClick={handleDownload}  ----  ISSO TEM QUE TER ACIMA NA TAG BUTTON */}
+      <br /><br />
+      <button className="btn-doc"onClick={() => navigate("/documentacao")}><AiFillRead/>Documentação</button>
     </section>
   );
 }

@@ -53,6 +53,8 @@ export default function Footer(){
                 <a href="#versoes">Versões</a>
                 <br />
                 <a href="/integrantes">Integrantes</a>
+                <br />
+                <a href="/contato">Contate-nos</a>
             </div>
 
             <div className="card-news">

@@ -30,8 +30,25 @@
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .hero button:hover {
   background: #29b6f6;
+}
+
+.hero .btn-doc {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #4fc3f7;
+  box-shadow:0 0 5px #4fc3f7,0 0 10px #4fc3f7,0 0 20px #4fc3f7;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-doc:hover {
+  background: #111 !important;
+  box-shadow:0 0 10px #4fc3f7,0 0 20px #4fc3f7,0 0 40px #4fc3f7,0 0 80px #4fc3f7;
 }

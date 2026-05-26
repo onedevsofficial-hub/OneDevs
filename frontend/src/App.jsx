@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import Copyright from "./components/Copyright/Copyright";
 import Integrantes from "./components/pages/Integrantes/integrantes"
 import Contato from "./components/pages/Contato/contato"
+import Documentação from "./components/pages/Documentação/documentacao"
 
 function Home() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/integrantes" element={<Integrantes />} />
         <Route path="/contato" element={<Contato/>}/>
+        <Route path="/documentacao" element={<Documentação/>}/>
       </Routes>
 
     </div>
