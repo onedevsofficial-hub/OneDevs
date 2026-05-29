@@ -5,10 +5,19 @@ export default function Footer(){
 
     const [email, setEmail] = useState("")
 
-    async function cadastrarEmail() {
-        if (!email) return
+    async function cadastrarEmail(e) {
+
+        e.preventDefault();
+
+        if (!email) return;
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailRegex.test(email)){
+            alert('Por favor, insira um e-mail válido.');
+            return;
+        }
             try {
-            const response = await fetch('http://localhost:3000/newsletter/cadastrar', {
+            const response = await fetch('https://onedevs.onrender.com/newsletter/cadastrar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -34,7 +43,7 @@ export default function Footer(){
         <>
         <div className="footer">
             <div>
-                <h3>OneDevsOS</h3>
+                <h3>OneDevs</h3>
                 <p>Segurança e tecnologia</p>
             </div>
 
@@ -53,18 +62,20 @@ export default function Footer(){
                 <a href="#versoes">Versões</a>
                 <br />
                 <a href="/integrantes">Integrantes</a>
-                <br />
-                <a href="/contato">Contate-nos</a>
             </div>
 
             <div className="card-news">
-                <h4>NewsLatter</h4>
+                <h4>NewsLetter</h4>
                 <p>Você receberá novidades sobre o nosso projeto!</p>
-                <input type="email" placeholder="Digite seu email" value={email}
-                onChange={(e)=> setEmail(e.target.value)}/>
-                <button className="btn-footer" onClick={cadastrarEmail} >Enviar</button>
+                <input
+                type="email"
+                placeholder="Digite seu email"
+                value={email}
+                onChange={(e)=> setEmail(e.target.value)}
+                required
+                />
+                <button type="submit" className="btn-footer" onClick={cadastrarEmail}>Enviar</button>
             </div>
-            
             
         </div>
         
