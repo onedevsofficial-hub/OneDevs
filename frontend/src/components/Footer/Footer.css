@@ -28,11 +28,11 @@
 .card-news p { font-size: 13px; opacity: 0.8; margin-top: 0 !important; border-top: none !important; padding-top: 0 !important; text-align: left !important;}
 
 .card-news input {
-  padding: 8px;
-  border: none;
+  padding: 9px;
   border-radius: 5px;
   width: 100%;
-  font-size: 12px;
+  font-size: 13px;
+  background-color: black;
 }
 
 .btn-footer {
@@ -60,4 +60,19 @@
 
 .navegacao-footer a{
   color: white;
+}
+
+.github-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 45px;
+    color: #00bfff;
+    transition: 0.3s;
+}
+
+.github-icon:hover{
+    color: white;
+    transform: scale(1.1);
 }

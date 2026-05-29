@@ -5,16 +5,15 @@ import './Hero.css'
 
 export default function Hero() {
 
-  //  const handleDownload = () => {
-     //  COLOCAR AQUI O LINK DO APP
-     // Pode ser .iso, .apk, .exe ou link da nuvem (Drive, AWS, etc)
+    const handleDownload = () => {
+
 
     //  TESTE 
-    //  const downloadLink = "https://sourceforge.net/projects/ventoy/files/v1.1.11/Ventoy%201.1.11%20release%20(6th%20Anniversary%20Ver.)%20source%20code.zip/download";
+     const downloadLink = "https://sourceforge.net/projects/ventoy/files/v1.1.11/Ventoy%201.1.11%20release%20(6th%20Anniversary%20Ver.)%20source%20code.zip/download";
 
      // abre o download em nova aba
-  //    window.open(downloadLink, "_blank");
-  //  };
+    window.open(downloadLink, "_blank");
+    };
 
   const navigate = useNavigate(); 
 
@@ -33,7 +32,7 @@ export default function Hero() {
 
       <br />
 
-      <button > <CgImport /> Baixe Agora </button>  
+      <button onClick={handleDownload} > <CgImport /> Baixe Agora </button>  
       {/* onClick={handleDownload}  ----  ISSO TEM QUE TER ACIMA NA TAG BUTTON */}
       <br /><br />
       <button className="btn-doc"onClick={() => navigate("/documentacao")}><AiFillRead/>Documentação</button>
