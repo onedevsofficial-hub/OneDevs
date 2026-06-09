@@ -4,17 +4,25 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const transporter = nodemailer.createTransport({
-    service: "gmail",
+    //service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    connectionTimeout: 10000,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD
+    },
+    
+    tls: {
+        rejectUnauthorized: false
     }
 })
 
 async function sendMail(to, subject, html) {
     try {
         await transporter.sendMail({
-            from: `<${process.env.EMAIL_USER}>`,
+            from: `"OneDevs OS" <${process.env.EMAIL_USER}>`,
             to,
             subject,
             html

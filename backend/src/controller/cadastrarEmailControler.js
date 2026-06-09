@@ -7,30 +7,26 @@ const cadastrarEmailController = {
         try {
             const { email } = req.body;
 
-            // 1. Validação de presença
             if (!email) {
                 return res.status(400).json({ message: "O email é obrigatório" });
             }
 
-            // 2. Validação de formato (Regex)
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 return res.status(400).json({ message: "Formato de e-mail inválido" });
             }
 
-            // 3. Consulta no MongoDB
             const emailExistente = await Newsletter.findOne({ email: email.toLowerCase().trim() });
 
             if (emailExistente) {
                 return res.status(409).json({ message: "Este e-mail já está cadastrado!" });
             }
 
-            // 4. Criação no MongoDB
             await Newsletter.create({
                 email: email.toLowerCase().trim()
             });
 
-            // Template HTML do seu e-mail
+            // Template HTML e-mail
             const htmlBoasVindas = `
             <!DOCTYPE html>
             <html lang="pt-BR">
@@ -100,12 +96,12 @@ const cadastrarEmailController = {
             </html>
             `;
 
-            // 5. Envio do e-mail (Sem o await para liberar a resposta HTTP mais rápido)
-            sendMail(email, "Bem-vindo ao OneDevsOS!", htmlBoasVindas)
+           
+           await sendMail(email, "Boas vindas ao OneDevsOS!", htmlBoasVindas)
                 .catch(err => console.error("Erro em background ao enviar e-mail:", err));
 
             // Retorna sucesso para o cliente imediatamente após salvar no banco
-            return res.status(201).json({ message: "Email cadastrado com sucesso" });
+            return res.status(201).json({ message: "Email cadastrado com sucesso e email enviado" });
 
         } catch (error) {
             console.error("Erro ao cadastrar e-mail:", error);
