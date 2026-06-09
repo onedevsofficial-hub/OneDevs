@@ -2,12 +2,14 @@ import express from 'express';
 import cors from 'cors';
 import router from './src/route/newsletterRoute.js';
 import cadastrarEmailRouter from './src/route/cadastrarEmailRoute.js';
+import conectarBanco from './src/config/mongoDB.js';
 
 const port = process.env.PORT || 3000
 
 const app = express();
 app.use(cors())
 app.use(express.json())
+conectarBanco();
 
 app.use(router)
 app.use(cadastrarEmailRouter)
