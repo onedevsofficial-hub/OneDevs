@@ -2,32 +2,35 @@ import Newsletter from "../config/newsletterSchema.js";
 import sendMail from "../config/nodemailer.js";
 
 const cadastrarEmailController = {
+  salvarEEnviarEmail: async (req, res) => {
+    try {
+      const { email } = req.body;
 
-    salvarEEnviarEmail: async (req, res) => {
-        try {
-            const { email } = req.body;
+      if (!email) {
+        return res.status(400).json({ message: "O email é obrigatório" });
+      }
 
-            if (!email) {
-                return res.status(400).json({ message: "O email é obrigatório" });
-            }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({ message: "Formato de e-mail inválido" });
+      }
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                return res.status(400).json({ message: "Formato de e-mail inválido" });
-            }
+      const emailExistente = await Newsletter.findOne({
+        email: email.toLowerCase().trim(),
+      });
 
-            const emailExistente = await Newsletter.findOne({ email: email.toLowerCase().trim() });
+      if (emailExistente) {
+        return res
+          .status(409)
+          .json({ message: "Este e-mail já está cadastrado!" });
+      }
 
-            if (emailExistente) {
-                return res.status(409).json({ message: "Este e-mail já está cadastrado!" });
-            }
+      await Newsletter.create({
+        email: email.toLowerCase().trim(),
+      });
 
-            await Newsletter.create({
-                email: email.toLowerCase().trim()
-            });
-
-            // Template HTML e-mail
-            const htmlBoasVindas = `
+      // Template HTML e-mail
+      const htmlBoasVindas = `
             <!DOCTYPE html>
             <html lang="pt-BR">
             <head>
@@ -96,18 +99,24 @@ const cadastrarEmailController = {
             </html>
             `;
 
-           
-           await sendMail(email, "Boas vindas ao OneDevsOS!", htmlBoasVindas)
-                .catch(err => console.error("Erro em background ao enviar e-mail:", err));
+      await sendMail({
+        to: email, 
+        subject: "Boas vindas ao OneDevs OS!",
+        html: htmlBoasVindas,
+        text: "Que bom ter você por aqui! Seu e-mail foi cadastrado com sucesso na nossa newsletter oficial do OneDevs OS.",
+      }).catch((err) =>
+        console.error("Erro em background ao enviar e-mail:", err),
+      );
 
-            // Retorna sucesso para o cliente imediatamente após salvar no banco
-            return res.status(201).json({ message: "Email cadastrado com sucesso e email enviado" });
-
-        } catch (error) {
-            console.error("Erro ao cadastrar e-mail:", error);
-            return res.status(500).json({ message: "Erro interno ao cadastrar" });
-        }
+      // Retorna sucesso para o cliente imediatamente após salvar no banco
+      return res
+        .status(201)
+        .json({ message: "Email cadastrado com sucesso e email enviado" });
+    } catch (error) {
+      console.error("Erro ao cadastrar e-mail:", error);
+      return res.status(500).json({ message: "Erro interno ao cadastrar" });
     }
+  },
 };
 
 export default cadastrarEmailController;

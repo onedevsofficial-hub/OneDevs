@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import router from './src/route/newsletterRoute.js';
+import router from './src/route/cadastrarEmailRoute.js';
 import cadastrarEmailRouter from './src/route/cadastrarEmailRoute.js';
 import conectarBanco from './src/config/mongoDB.js';
 
