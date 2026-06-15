@@ -1,8 +1,10 @@
 import { Router } from "express";
-import cadastrarEmailController from "../controller/cadastrarEmailControler.js";
+import cadastrarEmailController from "../controller/cadastrarEmailController.js";
+import contatoController from "../controller/contatoController.js";
 
-const cadastrarEmailRouter = Router()
+const router = Router()
 
-cadastrarEmailRouter.post("/newsletter/cadastrar", cadastrarEmailController.salvarEEnviarEmail);
+router.post("/newsletter/cadastrar", cadastrarEmailController.salvarEEnviarEmail);
+router.post("/contato", contatoController.enviarMensagem)
 
-export default cadastrarEmailRouter
+export default router

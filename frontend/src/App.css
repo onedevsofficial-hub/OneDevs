@@ -39,7 +39,7 @@ body{
 /* HERO */
 
 .hero{
-  background-image: 'url(https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/02/365-O-que-e%CC%81-tecnologia_.jpg)'; 
+  background-image: url('https://i0.wp.com/blog.portaleducacao.com.br/wp-content/uploads/2022/02/365-O-que-e%CC%81-tecnologia_.jpg'); 
   height:80vh;
   display:flex;
   flex-direction:column;

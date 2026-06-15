@@ -12,7 +12,6 @@ app.use(express.json())
 conectarBanco();
 
 app.use(router)
-app.use(cadastrarEmailRouter)
 
 app.listen(port, '0.0.0.0', () => {
     console.log("servidor ligado")
