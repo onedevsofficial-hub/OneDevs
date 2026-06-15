@@ -1,11 +1,10 @@
 import mongoose from 'mongoose';
 
-const MONGODB = process.env.MONGODB || 'mongodb://localhost:27017/onedevsos';
+const MONGODB = process.env.MONGODB;
 
 const conectarBanco = async () => {
   try {
     await mongoose.connect(MONGODB);
-    //console.log('Conectado ao MongoDB!');
   } catch (error) {
     console.error('Erro ao conectar ao MongoDB:', error.message);
     process.exit(1);
