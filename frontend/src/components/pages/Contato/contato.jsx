@@ -24,7 +24,7 @@ export default function Contato() {
     setStatus('Enviando...');
 
     try {
-      const response = await fetch('http://localhost:3000/contato', {
+      const response = await fetch('https://onedevs.onrender.com//contato', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
