@@ -11,37 +11,37 @@ const teamMembers = [
   {
     nome: "Luis Otavio",
     titulo: "Desenvolvedor Web",
-    descricao: "Responsável pelo desenvolvimento Web.",
+    descricao: "Responsável pelo desenvolvimento e implementação da interface web do projeto. Atuou na criação de componentes reutilizáveis, integração das funcionalidades da aplicação e otimização da experiência do usuário, contribuindo para uma plataforma moderna, responsiva e de fácil manutenção.",
     foto: Luis
   },
   {
     nome: "Fernando Henrique",
     titulo: "Product Owner (P.O)",
-    descricao: "Responsável por estruturar e organizar a documentação do projeto.",
+    descricao: "Atuou como responsável pela definição e priorização dos requisitos do projeto, garantindo o alinhamento entre as necessidades dos stakeholders e os objetivos da equipe. Contribuiu para a organização do backlog, validação das entregas e tomada de decisões estratégicas, assegurando que o produto desenvolvido agregasse valor ao usuário final e atendesse aos requisitos propostos.",
     foto: Fernando
   },
   {
     nome: "Kauê Lemos",
     titulo: "Designer Gráfico",
-    descricao: "Responsável pelas artes do projeto e apresentações.",
+    descricao: "Foi responsável pela identidade visual do projeto, desenvolvendo materiais gráficos que contribuíram para a clareza e profissionalismo das entregas. Elaborou os slides e estruturou as apresentações, organizando o conteúdo de forma visualmente atrativa e objetiva. Também atuou na preparação das apresentações, garantindo uma comunicação eficaz dos resultados e das principais propostas do projeto.",
     foto: Kaue
   },
   {
     nome: "Caike Batista",
     titulo: "Desenvolvedor BackEnd",
-    descricao: "Responsável pelo desenvolvimento BackEnd e implementação do banco de dados.",
+    descricao: "Foi responsável pelo desenvolvimento da arquitetura Back-End do projeto, implementando as regras de negócio e garantindo a integração entre os diferentes componentes do sistema. Também atuou na modelagem e implementação do banco de dados, assegurando a organização, integridade e eficiência no armazenamento e recuperação das informações necessárias para o funcionamento da aplicação.",
     foto: Caike
   },
   {
     nome: "Alber Tolin",
     titulo: "Desenvolvedor BackEnd",
-    descricao: "Responsável pelo desenvolvimento BackEnd e implementação do banco de dados.",
+    descricao: "Foi responsável pelo desenvolvimento da arquitetura Back-End do projeto, implementando as regras de negócio e garantindo a integração entre os diferentes componentes do sistema. Também atuou na modelagem e implementação do banco de dados, assegurando a organização, integridade e eficiência no armazenamento e recuperação das informações necessárias para o funcionamento da aplicação.",
     foto: Alber
   },
   {
     nome: "Gabriel Santana",
     titulo: "Administrador de Sistemas Linux",
-    descricao:"Desenvolveu um sistema completo em Linux, realizando implementação, testes e documentação.",
+    descricao:"Foi responsável pela administração e configuração do ambiente Linux utilizado no projeto, garantindo sua estabilidade, segurança e desempenho. Desenvolveu e implementou um sistema completo em Linux, realizando a instalação, configuração e integração dos componentes necessários. Também conduziu testes para validação do funcionamento da solução e elaborou a documentação técnica, contribuindo para a manutenção, replicação e continuidade do projeto.",
     foto: Gabriel
   }
 ];

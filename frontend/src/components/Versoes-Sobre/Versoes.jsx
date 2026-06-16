@@ -1,19 +1,18 @@
 import './VersoesSobre.css'
-import { useNavigate } from "react-router-dom";
-
 export default function Versoes(){
 
-    const handleDownload = () => {
+    // QUANDO O USUÁRIO CLICAR NO BOTÃO JÁ FAZ O DOWLOAD NA PRÓPRIA MÁQUINA 
+    function baixarArquivo() {
+    const link = document.createElement('a');
 
+    link.href = '/onedevsos-alberteinstein-1.0-amd64.iso';
+    link.download = 'onedevsos-alberteinstein-1.0-amd64.iso';
 
-    //  TESTE 
-     const downloadLink = "https://sourceforge.net/projects/ventoy/files/v1.1.11/Ventoy%201.1.11%20release%20(6th%20Anniversary%20Ver.)%20source%20code.zip/download";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
-     // abre o download em nova aba
-    window.open(downloadLink, "_blank");
-    };
-
-  const navigate = useNavigate(); 
 
     return(
         <section id="versoes">
@@ -26,7 +25,7 @@ export default function Versoes(){
                 <br />  
                 <p className="versoes-p">Tamanho - 3.1 GB </p>
                 <br />
-                <button className="btn-versoes" onClick={handleDownload}>Download</button>
+                <button className="btn-versoes" onClick={baixarArquivo}>Download</button>
                 
             </div>
         </section>

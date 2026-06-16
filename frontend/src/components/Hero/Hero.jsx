@@ -5,15 +5,17 @@ import './Hero.css'
 
 export default function Hero() {
 
-    const handleDownload = () => {
+  // QUANDO O USUÁRIO CLICAR NO BOTÃO JÁ FAZ O DOWLOAD NA PRÓPRIA MÁQUINA 
+    function baixarArquivo() {
+    const link = document.createElement('a');
 
+    link.href = '/onedevsos-alberteinstein-1.0-amd64.iso';
+    link.download = 'onedevsos-alberteinstein-1.0-amd64.iso';
 
-    //  TESTE 
-     const downloadLink = "https://sourceforge.net/projects/ventoy/files/v1.1.11/Ventoy%201.1.11%20release%20(6th%20Anniversary%20Ver.)%20source%20code.zip/download";
-
-     // abre o download em nova aba
-    window.open(downloadLink, "_blank");
-    };
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
   const navigate = useNavigate(); 
 
@@ -32,7 +34,7 @@ export default function Hero() {
 
       <br />
 
-      <button onClick={handleDownload} > <CgImport /> Baixe Agora </button>  
+      <button onClick={baixarArquivo} > <CgImport /> Baixe Agora </button>  
       {/* onClick={handleDownload}  ----  ISSO TEM QUE TER ACIMA NA TAG BUTTON */}
       <br /><br />
       <button className="btn-doc"onClick={() => navigate("/documentacao")}><AiFillRead/>Documentação</button>

@@ -17,6 +17,8 @@ export default function Topicos() {
         <a href="#diferenca">Qual a Diferença?</a>
         <a href="#ferramentas">Ferramentas Instaladas</a>
         <a href="#instalacao">Como Instalar</a>
+        <a href="#construcaoIso">Pré-requisitos para Construção da ISO</a>
+        <a href="#instalacaoSistema">Instalação do Sistema </a>
         <a href="#estrutura">Estrutura do Projeto</a>
         <a href="#ajuda">Precisa de Ajuda?</a>
         <a href="#politicas">Políticas e Boas Práticas</a>
@@ -231,6 +233,73 @@ sudo ./build.sh`}
           <pre>
 {`qemu-system-x86_64 -m 4096 -cdrom onedevsos.iso -boot d -enable-kvm`}
           </pre>
+        </div>
+
+        <div id="construcaoIso" className="secao">
+          <h1>Pré-requisitos para Construção da ISO</h1>
+
+          <p>Todos os comandos devem ser executados no terminal Linux, dentro de um sistema baseado
+             no Debian Trixie ou derivado.</p>
+          
+          <br />
+
+          <p>O script de construção instala automaticamente as dependências necessárias:</p>
+
+          <br />
+
+            <pre>
+{`debootstrap
+
+live-build
+
+xorriso
+
+squashfs-tools
+
+syslinux-common
+
+isolinux`}
+          </pre>
+
+          <br />
+
+          <h2>O que acontece após instalar essas dependências?</h2>
+
+          <br />
+
+          <ul>
+            <li>Debootstrap → Cria a estrutura base do Debian utilizada pelo OneDevsOS;</li>
+            <li>Live-build → Gera o ambiente Live da distribuição;</li>
+            <li>Xorriso → Responsável pela criação da ISO bootável;</li>
+            <li>Squashfs-tools → Compacta os arquivos do sistema;</li>
+            <li>Syslinux-common e Isolinux → Configuram o boot e inicialização da ISO.</li>
+          </ul>
+  
+        </div>
+
+        <div id="instalacaoSistema"className="secao">
+
+        <h1>Instalação do Sistema</h1>
+
+        <br />
+
+        <ol>
+          <li>Grave a ISO em um pendrive bootável;</li>
+          <li>Inicialize o computador pelo pendrive;</li>
+          <li>Aguarde o carregamento do modo Live;</li>
+          <li>Clique em “Instalar OneDevsOS” na área de trabalho;</li>
+          <li>Siga as instruções do instalador Calamares;</li>
+          <li>Configure idioma, teclado, usuário e particionamento;</li>
+          <li>Aguarde a conclusão da instalação;</li>
+          <li>Reinicie o computador;</li>
+          <li>Remova a mídia de instalação.</li>
+        </ol>
+        
+        <br />
+
+        <p>Após finalizar a instalação, o sistema estará pronto para uso com todas as ferramentas
+           pré-configuradas do OneDevsOS.</p>
+
         </div>
 
         <div id="estrutura" className="secao">
