@@ -6,16 +6,16 @@ import './Hero.css'
 export default function Hero() {
 
   // QUANDO O USUÁRIO CLICAR NO BOTÃO JÁ FAZ O DOWLOAD NA PRÓPRIA MÁQUINA 
-    function baixarArquivo() {
-    const link = document.createElement('a');
+//     function baixarArquivo() {
+//     const link = document.createElement('a');
 
-    link.href = '/onedevsos-alberteinstein-1.0-amd64.iso';
-    link.download = 'onedevsos-alberteinstein-1.0-amd64.iso';
+//     link.href = '/onedevsos-alberteinstein-1.0-amd64.iso';
+//     link.download = 'onedevsos-alberteinstein-1.0-amd64.iso';
 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+// }
 
   const navigate = useNavigate(); 
 
