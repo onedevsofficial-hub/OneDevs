@@ -6,16 +6,12 @@ import './Hero.css'
 export default function Hero() {
 
   // QUANDO O USUÁRIO CLICAR NO BOTÃO JÁ FAZ O DOWLOAD NA PRÓPRIA MÁQUINA 
-//     function baixarArquivo() {
-//     const link = document.createElement('a');
-
-//     link.href = '/onedevsos-alberteinstein-1.0-amd64.iso';
-//     link.download = 'onedevsos-alberteinstein-1.0-amd64.iso';
-
-//     document.body.appendChild(link);
-//     link.click();
-//     document.body.removeChild(link);
-// }
+    function baixarArquivo() {
+  window.open(
+    'https://drive.google.com/uc?export=download&id=1ycG8OJZzN-R7pokse0lcXOE6ClPxxtKS',
+    '_blank'
+  );
+}
 
   const navigate = useNavigate(); 
 
@@ -35,7 +31,6 @@ export default function Hero() {
       <br />
 
       <button onClick={baixarArquivo} > <CgImport /> Baixe Agora </button>  
-      {/* onClick={handleDownload}  ----  ISSO TEM QUE TER ACIMA NA TAG BUTTON */}
       <br /><br />
       <button className="btn-doc"onClick={() => navigate("/documentacao")}><AiFillRead/>Documentação</button>
     </section>

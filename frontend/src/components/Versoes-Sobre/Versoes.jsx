@@ -1,17 +1,13 @@
 import './VersoesSobre.css'
 export default function Versoes(){
 
-    // QUANDO O USUÁRIO CLICAR NO BOTÃO JÁ FAZ O DOWLOAD NA PRÓPRIA MÁQUINA 
-//     function baixarArquivo() {
-//     const link = document.createElement('a');
-
-//     link.href = '/onedevsos-alberteinstein-1.0-amd64.iso';
-//     link.download = 'onedevsos-alberteinstein-1.0-amd64.iso';
-
-//     document.body.appendChild(link);
-//     link.click();
-//     document.body.removeChild(link);
-// }
+     // QUANDO O USUÁRIO CLICAR NO BOTÃO JÁ FAZ O DOWLOAD NA PRÓPRIA MÁQUINA 
+    function baixarArquivo() {
+    window.open(
+    'https://drive.google.com/uc?export=download&id=1ycG8OJZzN-R7pokse0lcXOE6ClPxxtKS',
+    '_blank'
+  );
+}
 
 
     return(
@@ -23,7 +19,7 @@ export default function Versoes(){
                 <br />
                 <p className="versoes-p">Data de lançamento: 23/06/2026 </p>
                 <br />  
-                <p className="versoes-p">Tamanho - 3.1 GB </p>
+                <p className="versoes-p">Tamanho - 3.0 GB </p>
                 <br />
                 <button className="btn-versoes" onClick={baixarArquivo}>Download</button>
                 

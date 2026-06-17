@@ -29,7 +29,7 @@ const teamMembers = [
   {
     nome: "Caike Batista",
     titulo: "Desenvolvedor BackEnd",
-    descricao: "Foi responsável pelo desenvolvimento da arquitetura Back-End do projeto, implementando as regras de negócio e garantindo a integração entre os diferentes componentes do sistema. Também atuou na modelagem e implementação do banco de dados, assegurando a organização, integridade e eficiência no armazenamento e recuperação das informações necessárias para o funcionamento da aplicação.",
+    descricao: "Atuou no desenvolvimento da arquitetura Back-End do projeto, sendo responsável pela implementação das regras de negócio e pela integração entre os diferentes módulos do sistema. Também participou da modelagem e implementação do banco de dados, garantindo uma estrutura organizada, segura e eficiente para o armazenamento e a recuperação das informações essenciais ao funcionamento da aplicação.",
     foto: Caike
   },
   {
